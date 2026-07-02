@@ -21,7 +21,9 @@
 #include "i2c.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "app.h"
+#include <stdio.h>
+#include "debug.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -67,7 +69,20 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
+	extern I2C_HandleTypeDef hi2c1;
 
+	for(uint16_t addr = 1; addr < 128; addr++)
+	{
+	    if(HAL_I2C_IsDeviceReady(&hi2c1,
+	                             addr << 1,
+	                             2,
+	                             100) == HAL_OK)
+	    {
+	        char str[40];
+	        sprintf(str,"Found : 0x%02X", addr);
+	        LOG_INFO(str);
+	    }
+	}
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -91,7 +106,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
+  App_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -99,7 +114,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  App_Run();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

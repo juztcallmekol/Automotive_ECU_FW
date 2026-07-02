@@ -24,7 +24,8 @@ Application/app.o: ../Application/app.c ../Application/app.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
+ ../Core/Inc/i2c.h ../Core/Inc/main.h
 ../Application/app.h:
 C:/Users/HP/Documents/Automotive_ECU_FW/Services/debug.h:
 C:/Users/HP/Documents/Automotive_ECU_FW/DeviceDrivers/MPU6050/mpu6050.h:
@@ -53,3 +54,5 @@ C:/Users/HP/Documents/Automotive_ECU_FW/DeviceDrivers/MPU6050/mpu6050.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
+../Core/Inc/i2c.h:
+../Core/Inc/main.h:

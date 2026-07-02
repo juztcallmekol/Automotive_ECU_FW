@@ -1,2 +1,2 @@
-../Application/app.c:6:6:App_Init	2
-../Application/app.c:24:6:App_Run	2
+../Application/app.c:7:6:App_Init	4
+../Application/app.c:49:6:App_Run	2

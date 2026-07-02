@@ -1,6 +1,11 @@
-../DeviceDrivers/MPU6050/mpu6050.c:4:13:MPU6050_WriteReg	1
-../DeviceDrivers/MPU6050/mpu6050.c:12:13:MPU6050_ReadReg	1
-../DeviceDrivers/MPU6050/mpu6050.c:22:6:MPU6050_Init	3
-../DeviceDrivers/MPU6050/mpu6050.c:47:6:MPU6050_ReadAccel	2
-../DeviceDrivers/MPU6050/mpu6050.c:61:6:MPU6050_ReadGyro	2
-../DeviceDrivers/MPU6050/mpu6050.c:75:6:MPU6050_ReadAll	2
+../DeviceDrivers/MPU6050/mpu6050.c:9:25:MPU6050_WriteReg	2
+../DeviceDrivers/MPU6050/mpu6050.c:22:25:MPU6050_ReadReg	2
+../DeviceDrivers/MPU6050/mpu6050.c:39:18:MPU6050_ReadWhoAmI	1
+../DeviceDrivers/MPU6050/mpu6050.c:44:18:MPU6050_Init	9
+../DeviceDrivers/MPU6050/mpu6050.c:88:18:MPU6050_ReadAccel	2
+../DeviceDrivers/MPU6050/mpu6050.c:104:18:MPU6050_ReadGyro	2
+../DeviceDrivers/MPU6050/mpu6050.c:120:18:MPU6050_ReadTemperature	2
+../DeviceDrivers/MPU6050/mpu6050.c:137:18:MPU6050_ReadAll	2
+../DeviceDrivers/MPU6050/mpu6050.c:161:18:MPU6050_ReadAllScaled	2
+../DeviceDrivers/MPU6050/mpu6050.c:187:18:MPU6050_SelfTest	1
+../DeviceDrivers/MPU6050/mpu6050.c:192:18:MPU6050_Calibrate	1
