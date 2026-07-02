@@ -5,23 +5,29 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../BSP/bsp_led.c 
+../BSP/bsp_i2c.c \
+../BSP/bsp_led.c \
+../BSP/bsp_uart.c 
 
 OBJS += \
-./BSP/bsp_led.o 
+./BSP/bsp_i2c.o \
+./BSP/bsp_led.o \
+./BSP/bsp_uart.o 
 
 C_DEPS += \
-./BSP/bsp_led.d 
+./BSP/bsp_i2c.d \
+./BSP/bsp_led.d \
+./BSP/bsp_uart.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
 BSP/%.o BSP/%.su BSP/%.cyclo: ../BSP/%.c BSP/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/HP/Documents/Automotive_ECU_FW/BSP -IC:/Users/HP/Documents/Automotive_ECU_FW/Application -IC:/Users/HP/Documents/Automotive_ECU_FW/Services -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/HP/Documents/Automotive_ECU_FW/Config -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -IC:/Users/HP/Documents/Automotive_ECU_FW/DeviceDrivers/MPU6050 -I../Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/HP/Documents/Automotive_ECU_FW/BSP -IC:/Users/HP/Documents/Automotive_ECU_FW/Application -IC:/Users/HP/Documents/Automotive_ECU_FW/Services -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/HP/Documents/Automotive_ECU_FW/Config -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
 
 clean: clean-BSP
 
 clean-BSP:
-	-$(RM) ./BSP/bsp_led.cyclo ./BSP/bsp_led.d ./BSP/bsp_led.o ./BSP/bsp_led.su
+	-$(RM) ./BSP/bsp_i2c.cyclo ./BSP/bsp_i2c.d ./BSP/bsp_i2c.o ./BSP/bsp_i2c.su ./BSP/bsp_led.cyclo ./BSP/bsp_led.d ./BSP/bsp_led.o ./BSP/bsp_led.su ./BSP/bsp_uart.cyclo ./BSP/bsp_uart.d ./BSP/bsp_uart.o ./BSP/bsp_uart.su
 
 .PHONY: clean-BSP
 

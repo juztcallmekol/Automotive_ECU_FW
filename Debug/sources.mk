@@ -26,5 +26,7 @@ Application \
 BSP \
 Core/Src \
 Core/Startup \
+DeviceDrivers/MPU6050 \
 Drivers/STM32F1xx_HAL_Driver/Src \
+Services \
 

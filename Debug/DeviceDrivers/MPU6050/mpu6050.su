@@ -1,0 +1,6 @@
+../DeviceDrivers/MPU6050/mpu6050.c:4:13:MPU6050_WriteReg	16	static
+../DeviceDrivers/MPU6050/mpu6050.c:12:13:MPU6050_ReadReg	16	static
+../DeviceDrivers/MPU6050/mpu6050.c:22:6:MPU6050_Init	16	static
+../DeviceDrivers/MPU6050/mpu6050.c:47:6:MPU6050_ReadAccel	24	static
+../DeviceDrivers/MPU6050/mpu6050.c:61:6:MPU6050_ReadGyro	24	static
+../DeviceDrivers/MPU6050/mpu6050.c:75:6:MPU6050_ReadAll	32	static

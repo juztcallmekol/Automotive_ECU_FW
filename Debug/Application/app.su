@@ -1,2 +1,2 @@
-../Application/app.c:3:6:App_Init	4	static
-../Application/app.c:8:6:App_Run	4	static
+../Application/app.c:6:6:App_Init	8	static
+../Application/app.c:24:6:App_Run	168	static

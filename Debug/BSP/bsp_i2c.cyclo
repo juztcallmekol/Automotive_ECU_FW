@@ -1,0 +1,2 @@
+../BSP/bsp_i2c.c:6:19:BSP_I2C_Write	1
+../BSP/bsp_i2c.c:22:19:BSP_I2C_Read	1
