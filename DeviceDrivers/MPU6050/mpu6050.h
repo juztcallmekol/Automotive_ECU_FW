@@ -43,9 +43,21 @@ typedef struct
     int16_t GyroY;
     int16_t GyroZ;
 
-    float Temperature;
+    int16_t Temperature;
 
-} MPU6050_Data_t;
+} MPU6050_RawData_t;
+
+typedef struct
+{
+    float AccelX;
+    float AccelY;
+    float AccelZ;
+
+    float GyroX;
+    float GyroY;
+    float GyroZ;
+
+} MPU6050_Offset_t;
 
 typedef struct
 {
@@ -61,26 +73,63 @@ typedef struct
 
 } MPU6050_ScaledData_t;
 
+
+
+typedef enum
+{
+    MPU6050_ACCEL_2G = 0,
+    MPU6050_ACCEL_4G,
+    MPU6050_ACCEL_8G,
+    MPU6050_ACCEL_16G
+
+} MPU6050_AccelRange_t;
+
+typedef enum
+{
+    MPU6050_GYRO_250DPS = 0,
+    MPU6050_GYRO_500DPS,
+    MPU6050_GYRO_1000DPS,
+    MPU6050_GYRO_2000DPS
+
+} MPU6050_GyroRange_t;
+
+typedef struct
+{
+    MPU6050_AccelRange_t AccelRange;
+    MPU6050_GyroRange_t GyroRange;
+    uint16_t SampleRate;
+
+} MPU6050_Config_t;
+
 /* Driver APIs */
 
+MPU6050_Status_t MPU6050_Reset(void);
+
 MPU6050_Status_t MPU6050_Init(void);
+
+MPU6050_Status_t MPU6050_ReadWhoAmI(uint8_t *id);
+
+MPU6050_Status_t MPU6050_ReadRaw(MPU6050_RawData_t *data);
+
+MPU6050_Status_t MPU6050_ReadScaled(MPU6050_ScaledData_t *data);
+
+MPU6050_Status_t MPU6050_ReadAllScaled(MPU6050_ScaledData_t *data);
+
+MPU6050_Status_t MPU6050_SetAccelRange(MPU6050_AccelRange_t range);
+
+MPU6050_Status_t MPU6050_SetGyroRange(MPU6050_GyroRange_t range);
+
+MPU6050_Status_t MPU6050_SetDLPF(uint8_t dlpf);
+
+MPU6050_Status_t MPU6050_SetSampleRate(uint16_t sampleRate);
 
 MPU6050_Status_t MPU6050_SelfTest(void);
 
 MPU6050_Status_t MPU6050_Calibrate(void);
 
-MPU6050_Status_t MPU6050_ReadAccel(MPU6050_Data_t *data);
+void MPU6050_GetOffset(MPU6050_Offset_t *offset);
 
-MPU6050_Status_t MPU6050_ReadGyro(MPU6050_Data_t *data);
-
-MPU6050_Status_t MPU6050_ReadTemperature(MPU6050_Data_t *data);
-
-MPU6050_Status_t MPU6050_ReadAll(MPU6050_Data_t *data);
-
-MPU6050_Status_t MPU6050_ReadWhoAmI(uint8_t *id);
-
-MPU6050_Status_t MPU6050_ReadAllScaled(
-        MPU6050_ScaledData_t *data);
+void MPU6050_SetOffset(const MPU6050_Offset_t *offset);
 
 #ifdef __cplusplus
 }
