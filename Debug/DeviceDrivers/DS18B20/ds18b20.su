@@ -1,0 +1,4 @@
+../DeviceDrivers/DS18B20/ds18b20.c:9:16:crc8_dallas	24	static
+../DeviceDrivers/DS18B20/ds18b20.c:27:9:DS18B20_Init	24	static
+../DeviceDrivers/DS18B20/ds18b20.c:33:9:DS18B20_StartConversion	16	static
+../DeviceDrivers/DS18B20/ds18b20.c:47:9:DS18B20_ReadTemperature	40	static

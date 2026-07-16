@@ -1,0 +1,3 @@
+../RTE/rte_signal_if.c:9:6:RTE_Init	8	static
+../RTE/rte_signal_if.c:18:6:RTE_StartTempConversion	8	static
+../RTE/rte_signal_if.c:26:7:RTE_ReadTempResult	16	static

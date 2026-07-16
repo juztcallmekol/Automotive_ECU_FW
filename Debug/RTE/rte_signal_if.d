@@ -1,5 +1,6 @@
-Application/app.o: ../Application/app.c ../Application/app.h \
- C:/Users/HP/Documents/Automotive_ECU_FW/Services/debug.h \
+RTE/rte_signal_if.o: ../RTE/rte_signal_if.c ../RTE/rte_signal_if.h \
+ C:/Users/HP/Documents/Automotive_ECU_FW/DeviceDrivers/DS18B20/ds18b20.h \
+ C:/Users/HP/Documents/Automotive_ECU_FW/BSP/bsp_onewire.h \
  ../Core/Inc/main.h ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -24,10 +25,10 @@ Application/app.o: ../Application/app.c ../Application/app.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/i2c.h ../Core/Inc/main.h \
- C:/Users/HP/Documents/Automotive_ECU_FW/RTE/rte_signal_if.h
-../Application/app.h:
-C:/Users/HP/Documents/Automotive_ECU_FW/Services/debug.h:
+ C:/Users/HP/Documents/Automotive_ECU_FW/Config/board.h
+../RTE/rte_signal_if.h:
+C:/Users/HP/Documents/Automotive_ECU_FW/DeviceDrivers/DS18B20/ds18b20.h:
+C:/Users/HP/Documents/Automotive_ECU_FW/BSP/bsp_onewire.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -53,6 +54,4 @@ C:/Users/HP/Documents/Automotive_ECU_FW/Services/debug.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
-../Core/Inc/i2c.h:
-../Core/Inc/main.h:
-C:/Users/HP/Documents/Automotive_ECU_FW/RTE/rte_signal_if.h:
+C:/Users/HP/Documents/Automotive_ECU_FW/Config/board.h:
